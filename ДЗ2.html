@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Завдання</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        // Завдання 1: Оголошення змінних
+        var name = "Артем";
+        let age = 16;
+        const favoriteQuote = "Життя - це те, що з тобою відбувається, поки ти будуєш плани.";
+        console.log(name, age, favoriteQuote);
+
+        // Завдання 2: Робота з типами даних
+        let numberValue = 42;
+        let stringValue = "Hello, world!";
+        let booleanValue = true;
+        let undefinedValue;
+        let nullValue = null;
+        let symbolValue = Symbol("опис");
+        let bigIntValue = 9007199254740991n;
+
+        console.log(typeof numberValue, numberValue);
+        console.log(typeof stringValue, stringValue);
+        console.log(typeof booleanValue, booleanValue);
+        console.log(typeof undefinedValue, undefinedValue);
+        console.log(typeof nullValue, nullValue);
+        console.log(typeof symbolValue, symbolValue);
+        console.log(typeof bigIntValue, bigIntValue);
+
+        // Завдання 3: Арифметичні оператори
+        let num1 = 10, num2 = 3;
+        console.log("Сума:", num1 + num2);
+        console.log("Різниця:", num1 - num2);
+        console.log("Добуток:", num1 * num2);
+        console.log("Частка:", num1 / num2);
+        console.log("Остача:", num1 % num2);
+        console.log("Степінь:", num1 ** num2);
+
+        // Завдання 4: Оператори присвоєння та порівняння
+        let a = 10;
+        a += 5;
+        a *= 2;
+        console.log("Остаточне значення a:", a);
+        console.log("Чи більше за 16:", a > 16);
+
+        // Завдання 5: Логічні оператори та тернарний оператор
+        let isAdult = age >= 16;
+        let hasPermission = false;
+        let accessMessage = (isAdult || hasPermission) ? "Доступ дозволено" : "Доступ заборонено";
+        console.log(accessMessage);
+
+        // Завдання 6: Приведення типів
+        let number = 10;
+        let string = "Результат: " + number;
+        console.log(string);
+        console.log(5 == "5");
+        console.log(5 === "5");
+
+        // Завдання 7: Калькулятор
+        function calculator(num1, num2, operator) {
+            switch (operator) {
+                case "+": return num1 + num2;
+                case "-": return num1 - num2;
+                case "*": return num1 * num2;
+                case "/": return num2 !== 0 ? num1 / num2 : "Помилка: ділення на нуль";
+                default: return "Невідомий оператор";
+            }
+        }
+
+        console.log(calculator(10, 5, "+"));
+        console.log(calculator(10, 5, "-"));
+        console.log(calculator(10, 5, "*"));
+        console.log(calculator(10, 5, "/"));
+        console.log(calculator(10, 0, "/"));
+        console.log(calculator(10, 5, "%"));
+    </script>
+</body>
+</html>
